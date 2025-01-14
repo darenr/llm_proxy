@@ -1,0 +1,13 @@
+PROXY_HOST: localhost
+PROXY_PORT: 8080
+API_ENDPOINTS:
+  endpoint1:
+    match_field: field1
+    match_value: value1
+    target_host: api1.example.com
+    target_port: 80
+  endpoint2:
+    match_field: field2
+    match_value: value2
+    target_host: api2.example.com
+    target_port: 8080
