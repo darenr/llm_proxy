@@ -180,6 +180,8 @@ def handle_regular_http(client_socket, target_socket):
     Handles regular HTTP requests (non-streaming).
     """
     thread_name = threading.current_thread().name
+    logger.info(f"{thread_name} - Handling regular HTTP connection")
+
     data = client_socket.recv(BUFFER_SIZE)
     while data:
         target_socket.sendall(data)
